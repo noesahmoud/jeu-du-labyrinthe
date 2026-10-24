@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Le jeu du labyrinthe</title>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="page on" id="p1">
+  <h1>Bienvenue dans le jeu du labyrinthe</h1>
+  <input id="name" maxlength="14" placeholder="Ton nom de joueur" autocomplete="off">
+  <div class="skins" id="skins"></div>
+  <div class="rules">
+    <h2>Règles du jeu</h2>
+    <ul>
+      <li>Guide ton brawler du départ vert jusqu’à l’arrivée rouge.</li>
+      <li>Utilise le joystick sous le labyrinthe ou les flèches du clavier.</li>
+      <li>Chaque catégorie compte 10 niveaux, de plus en plus difficiles.</li>
+      <li>Termine les 10 niveaux d’une catégorie pour débloquer la suivante.</li>
+      <li>Chaque brawler a sa propre progression.</li>
+    </ul>
+  </div>
+  <div class="center"><button class="btn" id="nextBtn">Suivant</button></div>
+</section>
+
+<section class="page" id="p2">
+  <h1>Choisis ton niveau</h1>
+  <div id="cats"></div>
+  <div class="center"><button class="btn red" id="back">Retour à l’accueil</button></div>
+</section>
+
+<section class="page" id="p3">
+  <div id="top"></div>
+  <div id="wrap"><canvas id="cv"></canvas></div>
+  <div class="pad">
+    <button class="u" data-d="0" aria-label="Haut">▲</button>
+    <button class="l" data-d="3" aria-label="Gauche">◀</button>
+    <button class="rr" data-d="1" aria-label="Droite">▶</button>
+    <button class="d" data-d="2" aria-label="Bas">▼</button>
+  </div>
+  <div class="center"><button class="btn red" id="quitGame">Quitter</button></div>
+</section>
+
+<div id="win"><div class="card">
+  <h1>Bravo !</h1>
+  <p id="winTxt" style="font-size:1.3rem;margin:0 0 12px"></p>
+  <button class="btn" id="nextLvl">Niveau suivant</button>
+  <button class="btn red" id="quitWin">Quitter</button>
+</div></div>
+
+<script src="script.js"></script>
+</body>
+</html>
